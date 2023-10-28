@@ -126,8 +126,13 @@ async function main() {
             SentAmount = Math.abs(parseFloat(nextGrouped.transactionAmount)).toString();
         }
         if (type) {
+            // Parse a date that is in the format DD/MM/YYYY HH:MM:SS to a date object
+            const date = first['Transaction Created At'];
+            const [day, month, year] = date.split(' ')[0].split('/');
+            const [hour, minute, second] = date.split(' ')[1].split(':');
+            const usDate = `${month}/${day}/${year} ${hour}:${minute}:${second || '00'}`;
             output.push({
-                Date: first['Transaction Created At'],
+                Date: usDate,
                 Type: type,
                 "Received Amount": ReceivedAmount,
                 "Received Currency": ReceivedCurrency,
