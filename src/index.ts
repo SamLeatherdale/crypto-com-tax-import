@@ -1,7 +1,7 @@
 import { GroupedTransaction, Transaction } from "./types";
 import { read, write } from "./csv";
-import { formatCryptoCom } from "./crypto";
-import { formatKoinlyUniversal } from "./koinly";
+import { cryptoColumns, formatCryptoCom } from "./crypto";
+import { formatKoinlyUniversal, koinlyUniversalColumns } from "./koinly";
 import { isValid, parse } from "date-fns";
 
 function groupTransactions(data: Transaction[]) {
@@ -55,7 +55,8 @@ function main() {
 	write(
 		"crypto-com",
 		output.map(({ formatted }) => formatted),
+		cryptoColumns,
 	);
-	write("koinly", koinly);
+	write("koinly", koinly, koinlyUniversalColumns);
 }
 main();

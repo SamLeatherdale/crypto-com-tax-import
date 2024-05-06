@@ -78,3 +78,17 @@ export function formatCryptoCom(groupedRows: GroupedTransaction[]) {
 	}
 	return output;
 }
+
+export const cryptoColumns = [
+	"Date",
+	"Type",
+	"Received Currency",
+	"Received Amount",
+	"Received Net Worth",
+	"Sent Currency",
+	"Sent Amount",
+	"Sent Net Worth",
+	"Fee Currency",
+	"Fee Amount",
+	"Fee Net Worth",
+];

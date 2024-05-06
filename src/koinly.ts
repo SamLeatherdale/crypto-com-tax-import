@@ -18,9 +18,25 @@ type KoinlyUniversal = Pick<
 	TxHash: "";
 };
 
+export const koinlyUniversalColumns = [
+	"Date",
+	"Sent Amount",
+	"Sent Currency",
+	"Received Amount",
+	"Received Currency",
+	"Fee Amount",
+	"Fee Currency",
+	"Net Worth Amount",
+	"Net Worth Currency",
+	"Label",
+	"Description",
+	"TxHash",
+];
+
 /**
  * Format using the universal Koinly format
  * @see https://support.koinly.io/hc/en-us/articles/9914912005916-How-to-create-a-custom-CSV-file-with-your-data
+ * @see https://docs.google.com/spreadsheets/d/1dESkilY70aLlo18P3wqXR_PX1svNyAbkYiAk2tBPJng/edit#gid=0
  */
 export function formatKoinlyUniversal(
 	groups: GroupedOutput[],
