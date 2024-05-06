@@ -2,20 +2,21 @@
   "name": "crypto-com-tax-import",
   "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Convert crypto.com export files into formats required by various tax software",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "tsx index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx src/index.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.8.9",
+    "prettier": "^3.2.5",
     "tsx": "^3.14.0",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "csv-parser": "^3.0.0"
+    "csv": "^6.3.8",
+    "date-fns": "^3.6.0"
   }
 }
